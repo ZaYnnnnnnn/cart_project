@@ -12,6 +12,7 @@
 <% @stores.each do |store| %>
   <tr>
     <td><%= store.title %> </td>
+    <td><%= link_to 'Show', store_path(store) %></td>
     <td><%= link_to 'Edit', edit_store_path(store) %></td>
     <td><%= link_to 'Remove', store_path(store), method: :delete, data: { confirm: "Are you sure?" } %></td>
     </tr>

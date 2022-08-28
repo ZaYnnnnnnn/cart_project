@@ -1,0 +1,21 @@
+<h1> Create New Catagory </h1>
+<% if @catagories.errors.any? %>
+<h3> Error </h3>
+  <ul>
+  <% @catagories.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+  </ul>
+<% end %>
+<%= form_with scope: :catagory, url: catagories_path, local: true do |f| %>
+
+  <p>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.submit "Create", :class=> "btn btn-danger" %>
+  </p>
+
+<% end %>

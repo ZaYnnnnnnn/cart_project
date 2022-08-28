@@ -1,0 +1,27 @@
+<h1> Catagories listing page </h1>
+<table>
+ <thead>
+  <tr>
+    <th>Catagory Title</th>
+    <th colspan="3">Actions</th>
+  </tr>
+ </thead>
+
+
+<tbody>
+<% @catagories.each do |catagory| %>
+  <tr>
+    <td><%= catagory.title %> </td>
+    <td><%= link_to 'Show', catagory_path(catagory) %></td>
+    <td><%= link_to 'Edit', edit_catagory_path(catagory) %></td>
+    <td><%= link_to 'Remove', catagory_path(catagory), method: :delete, data: { confirm: "Are you sure?" } %></td>
+    
+    </tr>
+    <% end %>
+  </tbody>
+ </table>
+  <P>
+ <P>
+ <%= link_to "Create new Catagory" , new_catagory_path, :class=> "btn btn-danger" %>
+ </p>
+ </p>
