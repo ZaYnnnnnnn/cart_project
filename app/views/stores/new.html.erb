@@ -1,0 +1,21 @@
+<h1> Create new store </h1>
+<% if @stores.errors.any? %>
+<h3> Error </h3>
+  <ul>
+  <% @stores.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+  </ul>
+<% end %>
+<%= form_with scope: :store, url: stores_path, local: true do |f| %>
+
+  <p>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.submit "Create", :class=> "btn btn-danger" %>
+  </p>
+
+<% end %>

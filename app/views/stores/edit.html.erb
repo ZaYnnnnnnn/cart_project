@@ -1,0 +1,21 @@
+<h1> Edit store </h1>
+<% if @store.errors.any? %>
+<h3> Error </h3>
+  <ul>
+  <% @store.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+  </ul>
+<% end %>
+<%= form_with(model: @store, local: true) do |f| %>
+
+  <p>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.submit "Edit", :class=> "btn btn-danger"%>
+  </p>
+
+<% end %>
