@@ -1,0 +1,25 @@
+<h1> Edit Product </h1>
+<% if @product.errors.any? %>
+<h3> Error </h3>
+  <ul>
+  <% @product.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+  </ul>
+<% end %>
+<%= form_with(model: @product, local: true) do |f| %>
+
+  <p>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </p>
+     <p>
+    <%= f.label :price %><br/>
+    <%= f.text_field :price%>
+  </p>
+
+  <p>
+    <%= f.submit "Edit", :class=> "btn btn-danger"%>
+  </p>
+
+<% end %>
