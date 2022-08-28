@@ -1,13 +1,13 @@
-<h1> Edit catagory </h1>
-<% if @catagory.errors.any? %>
+<h1> Edit category </h1>
+<% if @category.errors.any? %>
 <h3> Error </h3>
   <ul>
-  <% @catagory.errors.full_messages.each do |msg| %>
+  <% @category.errors.full_messages.each do |msg| %>
   <li><%= msg %></li>
   <% end %>
   </ul>
 <% end %>
-<%= form_with(model: @catagory, local: true) do |f| %>
+<%= form_with(model: @category, local: true) do |f| %>
 
   <p>
     <%= f.label :title %><br/>

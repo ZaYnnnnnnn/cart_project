@@ -1,13 +1,13 @@
-<h1> Create New Catagory </h1>
-<% if @catagories.errors.any? %>
+<h1> Create New Category </h1>
+<% if @categories.errors.any? %>
 <h3> Error </h3>
   <ul>
-  <% @catagories.errors.full_messages.each do |msg| %>
+  <% @categories.errors.full_messages.each do |msg| %>
   <li><%= msg %></li>
   <% end %>
   </ul>
 <% end %>
-<%= form_with scope: :catagory, url: catagories_path, local: true do |f| %>
+<%= form_with scope: :category, url: categories_path, local: true do |f| %>
 
   <p>
     <%= f.label :title %><br/>
