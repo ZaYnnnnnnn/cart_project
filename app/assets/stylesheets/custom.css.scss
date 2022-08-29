@@ -28,3 +28,11 @@
   background-size: cover;
   height: 425px;
 }
+
+.card{
+  height: 300px;
+  width: 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
